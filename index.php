@@ -4,7 +4,9 @@
 
 require_once 'Car.php';
 require_once 'Bicycle.php';
+require_once 'Speedometer.php';
 
+use Speedometer;
 use car;
 use Bicycle;
 
@@ -32,3 +34,5 @@ var_dump($velib);
 $velib->setCurrentSpeed(15);
 $velib->switchOn();
 var_dump($velib);
+
+echo Speedometer::convertKmToMiles(10);

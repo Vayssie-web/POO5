@@ -4,12 +4,13 @@
 
 class Speedometer {
 
-    Const convertValor = 1.609;
+    const convertValor = 1.609;
+    const roundValor = 2;
 
     public static function convertKmToMiles($lenght){
-        return $lenght / self::convertValor;
+        return round($lenght / self::convertValor, self::roundValor);
     }
     public static function concertMilesToKm($lenght){
-        return $lenght * self::convertValor;
+        return round($lenght * self::convertValor, self::roundValor);
     }
 }
